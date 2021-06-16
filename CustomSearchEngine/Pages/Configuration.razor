@@ -1,0 +1,12 @@
+﻿@page "/configuration"
+
+<h3>Configuration</h3>
+
+<label>Append these arguments to my search:</label>
+<input type="text" @bind="AppendedArgs" />
+<button @onclick="SaveConfig">Save</button>
+
+@if (ChangesSaved)
+{
+	<label>Changes saved.</label>
+}
