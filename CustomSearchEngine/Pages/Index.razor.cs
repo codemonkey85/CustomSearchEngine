@@ -1,6 +1,4 @@
-﻿using Blazored.LocalStorage;
-using Microsoft.AspNetCore.Components;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using System.Web;
 
@@ -8,10 +6,6 @@ namespace CustomSearchEngine.Pages
 {
     public partial class Index
     {
-        [Inject] ILocalStorageService localStorage { get; set; }
-
-        [Inject] NavigationManager NavManager { get; set; }
-
         private string InputSearchString { get; set; }
 
         private string AppendedArgs { get; set; }

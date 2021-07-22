@@ -1,14 +1,10 @@
-﻿using Blazored.LocalStorage;
-using Microsoft.AspNetCore.Components;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 
 namespace CustomSearchEngine.Pages
 {
     public partial class Configuration
     {
-        [Inject] ILocalStorageService localStorage { get; set; }
-
         private string AppendedArgs { get; set; }
 
         private bool ChangesSaved { get; set; } = false;
