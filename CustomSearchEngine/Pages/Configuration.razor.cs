@@ -1,31 +1,27 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿namespace CustomSearchEngine.Pages;
 
-namespace CustomSearchEngine.Pages
+public partial class Configuration
 {
-    public partial class Configuration
+    private string? AppendedArgs { get; set; }
+
+    private bool ChangesSaved { get; set; } = false;
+
+    protected override async Task OnInitializedAsync()
     {
-        private string AppendedArgs { get; set; }
-
-        private bool ChangesSaved { get; set; } = false;
-
-        protected override async Task OnInitializedAsync()
+        try
         {
-            try
-            {
-                AppendedArgs = await localStorage.GetItemAsync<string>(nameof(AppendedArgs));
-                StateHasChanged();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"{ex.Message}{Environment.NewLine}{ex.StackTrace}");
-            }
+            AppendedArgs = await localStorage.GetItemAsync<string>(nameof(AppendedArgs));
+            StateHasChanged();
         }
-
-        private async Task SaveConfig()
+        catch (Exception ex)
         {
-            await localStorage.SetItemAsync(nameof(AppendedArgs), AppendedArgs);
-            ChangesSaved = true;
+            Console.WriteLine($"{ex.Message}{Environment.NewLine}{ex.StackTrace}");
         }
+    }
+
+    private async Task SaveConfig()
+    {
+        await localStorage.SetItemAsync(nameof(AppendedArgs), AppendedArgs);
+        ChangesSaved = true;
     }
 }
