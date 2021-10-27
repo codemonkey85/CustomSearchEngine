@@ -173,7 +173,7 @@
       "url": "CustomSearchEngine.styles.css"
     },
     {
-      "hash": "sha256-9A4pbhMass1V05rISHBxTQYkw9noL5+HQ4A6LUm0spM=",
+      "hash": "sha256-qCDFLodM\/7WF3bFvh9Sk7cnxEgiYk0KqIyRCqVWtneQ=",
       "url": "css\/app.css"
     },
     {
@@ -241,5 +241,5 @@
       "url": "sample-data\/weather.json"
     }
   ],
-  "version": "0FSpXQ64"
+  "version": "Ozofo9Mn"
 };
