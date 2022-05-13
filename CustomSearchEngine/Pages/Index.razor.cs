@@ -1,6 +1,4 @@
-﻿using System.Web;
-
-namespace CustomSearchEngine.Pages;
+﻿namespace CustomSearchEngine.Pages;
 
 public partial class Index
 {
