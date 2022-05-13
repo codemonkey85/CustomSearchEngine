@@ -12,7 +12,7 @@ public partial class Index
     {
         try
         {
-            AppendedArgs = await localStorage.GetItemAsync<string>(nameof(AppendedArgs));
+            AppendedArgs = await LocalStorage.GetItemAsync<string>(nameof(AppendedArgs));
             StateHasChanged();
         }
         catch (Exception ex)

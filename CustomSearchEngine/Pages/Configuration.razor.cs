@@ -10,7 +10,7 @@ public partial class Configuration
     {
         try
         {
-            AppendedArgs = await localStorage.GetItemAsync<string>(nameof(AppendedArgs));
+            AppendedArgs = await LocalStorage.GetItemAsync<string>(nameof(AppendedArgs));
             StateHasChanged();
         }
         catch (Exception ex)
@@ -21,7 +21,7 @@ public partial class Configuration
 
     private async Task SaveConfig()
     {
-        await localStorage.SetItemAsync(nameof(AppendedArgs), AppendedArgs);
+        await LocalStorage.SetItemAsync(nameof(AppendedArgs), AppendedArgs);
         ChangesSaved = true;
     }
 }

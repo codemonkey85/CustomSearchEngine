@@ -2,5 +2,7 @@
 
 <h1>Custom Search Engine</h1>
 
-<input type="text" placeholder="Enter text to search" @bind="InputSearchString"></input>
-<button type="submit" @onclick="DoSearch">Search</button>
+<EditForm Model=this OnValidSubmit="DoSearch">
+    <InputText placeholder="Enter text to search" @bind-Value=InputSearchString></InputText>
+    <button class="btn btn-primary" type="submit">Search</button>
+</EditForm>
